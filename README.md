@@ -4,24 +4,43 @@
 
 <br>
 
-## `> about`
+## About me
 
-```ts
-const vyacheslav = {
-  role: "Full-Stack Developer",
+Full-Stack Developer focused on **backend architecture, scalable web platforms, real-time systems and production infrastructure**.
 
-  focus: [
-    "Backend Architecture",
-    "Web Platforms",
-    "Real-Time Systems",
-    "Telegram Mini Apps",
-    "AdTech",
-    "DevOps"
-  ],
+I work across the full product lifecycle - from architecture and frontend to backend, databases, deployment and production support.
 
-  principle: "Reliable software > impressive demos"
-};
-```
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Main focus
+
+- Backend Architecture
+- Web Platforms
+- Real-Time Systems
+- Telegram Mini Apps
+- AdTech & Analytics
+- DevOps & Infrastructure
+
+</td>
+
+<td width="50%" valign="top">
+
+### How I work
+
+- Production-first mindset
+- Clean architecture
+- Reliable backend logic
+- Automation where it makes sense
+- Debug root causes, not symptoms
+- Build → Deploy → Improve
+
+</td>
+</tr>
+</table>
+
+> Reliable software beats impressive demos.
 
 I build full-stack products from the first architecture decision to production deployment.
 
