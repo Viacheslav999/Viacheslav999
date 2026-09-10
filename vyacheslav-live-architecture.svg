@@ -1,0 +1,154 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="codeClip1"><rect x="78" y="126" width="0" height="24"><animate attributeName="width" values="0;430;430" keyTimes="0;0.6;1" dur="2.6s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="codeClip2"><rect x="78" y="156" width="0" height="24"><animate attributeName="width" values="0;0;390;390" keyTimes="0;0.25;0.8;1" dur="3.2s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="codeClip3"><rect x="78" y="186" width="0" height="24"><animate attributeName="width" values="0;0;355;355" keyTimes="0;0.35;0.86;1" dur="3.8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="codeClip4"><rect x="78" y="216" width="0" height="24"><animate attributeName="width" values="0;0;420;420" keyTimes="0;0.45;0.9;1" dur="4.4s" repeatCount="indefinite"/></rect></clipPath>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#101820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="360" rx="22" fill="#0d1117"/>
+  <rect x="1" y="1" width="1198" height="358" rx="21" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- top bar -->
+  <circle cx="28" cy="27" r="5" fill="#f85149"/>
+  <circle cx="46" cy="27" r="5" fill="#d29922"/>
+  <circle cx="64" cy="27" r="5" fill="#3fb950"/>
+  <text x="92" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#8b949e">vyacheslav.dev / production</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+    <circle cx="1042" cy="27" r="5" fill="#3fb950">
+      <animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="1055" y="32" fill="#8b949e">LIVE</text>
+    <text x="1100" y="32" fill="#3fb950">healthy</text>
+  </g>
+
+  <!-- separators -->
+  <line x1="22" y1="50" x2="1178" y2="50" stroke="#21262d"/>
+  <line x1="604" y1="72" x2="604" y2="322" stroke="#21262d"/>
+
+  <!-- left header -->
+  <text x="48" y="91" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#f0f6fc">Vyacheslav</text>
+  <text x="48" y="116" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#58a6ff">full-stack / backend / devops</text>
+
+  <!-- animated code -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">
+    <text x="78" y="144" fill="#c9d1d9" clip-path="url(#codeClip1)"><tspan fill="#ff7b72">const</tspan> engineer = <tspan fill="#79c0ff">"Vyacheslav"</tspan>;</text>
+    <text x="78" y="174" fill="#c9d1d9" clip-path="url(#codeClip2)">stack.<tspan fill="#d2a8ff">push</tspan>(<tspan fill="#a5d6ff">"React"</tspan>, <tspan fill="#a5d6ff">"NestJS"</tspan>);</text>
+    <text x="78" y="204" fill="#c9d1d9" clip-path="url(#codeClip3)">infra = [<tspan fill="#a5d6ff">"Docker"</tspan>, <tspan fill="#a5d6ff">"Nginx"</tspan>];</text>
+    <text x="78" y="234" fill="#c9d1d9" clip-path="url(#codeClip4)">deploy(<tspan fill="#7ee787">"production"</tspan>);</text>
+  </g>
+
+  <!-- cursor moving/flicker -->
+  <rect x="79" y="248" width="9" height="18" rx="1" fill="#58a6ff">
+    <animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="79;250;420;79" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- left mini metrics -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">
+    <text x="48" y="296" fill="#8b949e">latency</text>
+    <text x="109" y="296" fill="#3fb950">42ms</text>
+    <text x="180" y="296" fill="#8b949e">uptime</text>
+    <text x="232" y="296" fill="#3fb950">99.99%</text>
+    <text x="314" y="296" fill="#8b949e">deploy</text>
+    <text x="365" y="296" fill="#58a6ff">ready</text>
+  </g>
+
+  <!-- animated sparkline -->
+  <polyline points="48,316 80,314 112,318 144,309 176,312 208,301 240,306 272,295 304,300 336,290 368,294 400,286 432,292 464,282 496,287 528,278"
+            fill="none" stroke="#238636" stroke-width="2">
+    <animate attributeName="stroke-dasharray" values="0 600;600 0" dur="2.4s" repeatCount="indefinite"/>
+  </polyline>
+
+  <!-- right title -->
+  <text x="642" y="91" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#8b949e">runtime architecture</text>
+
+  <!-- architecture cards -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <!-- browser -->
+    <rect x="642" y="120" width="150" height="62" rx="10" fill="url(#panelGlow)" stroke="#30363d"/>
+    <text x="660" y="145" font-size="13" fill="#8b949e">client</text>
+    <text x="660" y="166" font-size="16" fill="#f0f6fc">Web / TMA</text>
+
+    <!-- api -->
+    <rect x="874" y="120" width="150" height="62" rx="10" fill="url(#panelGlow)" stroke="#30363d"/>
+    <text x="892" y="145" font-size="13" fill="#8b949e">service</text>
+    <text x="892" y="166" font-size="16" fill="#f0f6fc">API / WS</text>
+
+    <!-- db -->
+    <rect x="758" y="236" width="150" height="62" rx="10" fill="url(#panelGlow)" stroke="#30363d"/>
+    <text x="776" y="261" font-size="13" fill="#8b949e">data</text>
+    <text x="776" y="282" font-size="16" fill="#f0f6fc">Postgres</text>
+
+    <!-- cache -->
+    <rect x="988" y="236" width="150" height="62" rx="10" fill="url(#panelGlow)" stroke="#30363d"/>
+    <text x="1006" y="261" font-size="13" fill="#8b949e">cache</text>
+    <text x="1006" y="282" font-size="16" fill="#f0f6fc">Redis</text>
+  </g>
+
+  <!-- architecture lines -->
+  <g fill="none" stroke="#30363d" stroke-width="2">
+    <path id="p1" d="M792 151 H874"/>
+    <path id="p2" d="M949 182 C949 210 880 208 833 236"/>
+    <path id="p3" d="M949 182 C965 214 1035 209 1063 236"/>
+  </g>
+
+  <!-- moving request packets -->
+  <circle r="5" fill="#58a6ff" filter="url(#softGlow)">
+    <animateMotion dur="1.7s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion>
+  </circle>
+  <circle r="5" fill="#7ee787" filter="url(#softGlow)">
+    <animateMotion dur="2.4s" begin=".6s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion>
+  </circle>
+  <circle r="5" fill="#d2a8ff" filter="url(#softGlow)">
+    <animateMotion dur="2.1s" begin="1.1s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion>
+  </circle>
+
+  <!-- node pulses -->
+  <g fill="none" stroke="#3fb950" opacity=".7">
+    <circle cx="949" cy="151" r="10">
+      <animate attributeName="r" values="8;20;8" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".8;0;.8" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="833" cy="267" r="8">
+      <animate attributeName="r" values="7;17;7" dur="2.8s" begin=".7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".7;0;.7" dur="2.8s" begin=".7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- bottom ticker -->
+  <line x1="22" y1="330" x2="1178" y2="330" stroke="#21262d"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6e7681">
+    <text x="48" y="349">React</text>
+    <text x="110" y="349">Next.js</text>
+    <text x="182" y="349">Vue</text>
+    <text x="230" y="349">Node.js</text>
+    <text x="296" y="349">NestJS</text>
+    <text x="360" y="349">PostgreSQL</text>
+    <text x="452" y="349">Redis</text>
+    <text x="503" y="349">Docker</text>
+    <text x="566" y="349">Nginx</text>
+    <text x="620" y="349">Linux</text>
+    <text x="670" y="349">WebSocket</text>
+    <text x="754" y="349">CI/CD</text>
+    <text x="808" y="349">Prisma</text>
+    <text x="864" y="349">Python</text>
+    <text x="926" y="349">FastAPI</text>
+  </g>
+
+  <!-- tiny scanning highlight -->
+  <rect x="22" y="52" width="2" height="276" fill="#58a6ff" opacity=".0">
+    <animate attributeName="x" values="22;1178;22" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.18;0" dur="7s" repeatCount="indefinite"/>
+  </rect>
+</svg>
